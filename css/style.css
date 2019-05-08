@@ -9,7 +9,7 @@ body {
 body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 24px;
     color: #000;
     margin: 0;
     padding: 0;
@@ -23,8 +23,7 @@ body {
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     background: #fff;
     /* Center slide text vertically */
     display: -webkit-box;
@@ -56,11 +55,44 @@ body {
     opacity: 1;
 }
 
-.swiper-slide:nth-child-first {
-    background-image: url(/images/bg1.jpg);
+.swiper-slide:first-child {
+    background: url(../images/bg1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.swiper-slide:first-child p {
+    left: 6%;
+    bottom: 14%;
+    width: 30%;
+    position: absolute;
 }
 
 .swiper-slide:nth-child(2) {
-    background: #3183ff;
-    color: #fff;
+    background: url(../images/bg2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.swiper-slide:nth-child(3) {
+    background: url(../images/bg3.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+
+/* 修改导航栏的位置和大小 */
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+    right: 30px;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 15px 0;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #393d49ad;
 }
