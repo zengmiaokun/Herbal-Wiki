@@ -1,0 +1,9 @@
+@import url("../layui/css/layui.css");
+body {
+    background: url(../images/bg.jpg) no-repeat bottom right;
+    background-size: cover;
+}
+
+.layui-nav {
+    text-align: right;
+}
