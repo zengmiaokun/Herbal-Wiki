@@ -15,6 +15,43 @@ body {
     padding: 0;
 }
 
+
+/* 导航 */
+
+.layui-nav {
+    z-index: 2;
+    top: 0;
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    background-color: #00000020;
+}
+
+
+/* 搜索 */
+
+.search {
+    top: 25%;
+    left: 12%;
+    position: absolute;
+}
+
+.search .layui-input {
+    padding-left: 30px;
+    height: 55px;
+    width: 420px;
+}
+
+.search .layui-btn {
+    height: 55px;
+    padding: 0 20px;
+    font-size: 30px;
+    background-color: #5FB878;
+}
+
+
+/* 轮播 */
+
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -60,26 +97,36 @@ body {
     background-size: cover;
 }
 
+.swiper-slide.info p {
+    text-align: center;
+}
+
+.swiper-slide.info .down-arrow {
+    font-size: larger;
+    color: #aaa;
+}
+
 .swiper-slide p {
     bottom: 0;
-    padding-bottom:30px; 
+    padding-bottom: 30px;
     width: 80%;
     position: absolute;
     color: #eee;
 }
 
-.swiper-slide p:before, .swiper-slide p:after{
-    content:"";
-    position:absolute;
+.swiper-slide p:before,
+.swiper-slide p:after {
+    content: "";
+    position: absolute;
     bottom: 0;
     right: -50px;
     left: -50px;
     top: 100%;
-    z-index:-1;
-   -webkit-box-shadow:0 0 150px 135px #101010a8;
-    -moz-box-shadow:0 0 150px 135px #101010a8;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 150px 135px #101010a8;
+    -moz-box-shadow: 0 0 150px 135px #101010a8;
     box-shadow: 0 0 150px 135px #101010a8;
-  }
+}
 
 .swiper-slide.book {
     background: url(../images/bg3.jpg) no-repeat center center;
