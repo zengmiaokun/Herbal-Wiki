@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <title>搜索结果</title>
     <link rel="stylesheet" href="./css/rearch.css">
     <script src="./layui/layui.js"></script>
@@ -11,29 +11,67 @@
 </head>
 
 <body>
-    <!-- 导航栏 -->
-    <div class="nav">
-        <ul class="layui-nav">
-            <li class="layui-nav-item">
-                <a href="">收藏本<span class="layui-badge">9</span></a>
-            </li>
-            <li class="layui-nav-item">
-                <a href="">消息<span class="layui-badge-dot"></span></a>
-            </li>
-            <li class="layui-nav-item">
-                <a href=""><img src="./images/user.jpg" class="layui-nav-img">我</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">修改信息</a></dd>
-                    <dd><a href="javascript:;">安全管理</a></dd>
-                    <dd><a href="javascript:;">退出</a></dd>
-                </dl>
-            </li>
+    <div class="layui-layout layui-layout-admin">
+        <!-- 导航栏 -->
+        <div class="header layui-header">
+            <div class="layui-main">
+                <a class="index" href="index.html">首页</a>
+
+                <form action="search.html" class="fly-extend-banner-search search" target=" ">
+                    <div class="layui-inline"> <input placeholder="请输入要查询的中草药" name="kws" autocomplete="off" value="" class="layui-input"> </div>
+                    <!-- <button class="layui-btn">
+                        <i class="layui-icon layui-icon-search"></i>
+                    </button> -->
+                </form>
+
+                <ul class="layui-nav">
+                    <li class="layui-nav-item">
+                        <a href="">收藏本<span class="layui-badge">9</span></a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">消息<span class="layui-badge-dot"></span></a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href=""><img src="./images/user.jpg" class="layui-nav-img">我</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">修改信息</a></dd>
+                            <dd><a href="javascript:;">安全管理</a></dd>
+                            <dd><a href="javascript:;">退出</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <script>
+            //注意：导航 依赖 element 模块，否则无法进行功能性操作
+            layui.use('element', function() {
+                var element = layui.element;
+            });
+        </script>
+    </div>
+    <div class="layui-tab layui-tab-brief search-type">
+        <ul class="layui-tab-title">
+            <li class="layui-this">快速检索</li>
+            <li>高级检索</li>
         </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <iframe src="fast_search.html" frameborder="0"></iframe>
+            </div>
+
+            <!-- 高级检索 -->
+            <div class="layui-tab-item">
+                <iframe src="adv_search.html" frameborder="0"></iframe>
+            </div>
+        </div>
     </div>
     <script>
-        //注意：导航 依赖 element 模块，否则无法进行功能性操作
-        layui.use('element', function() {
+        layui.use('element', 'form', function() {
             var element = layui.element;
+            var form = layui.form;
         });
     </script>
 </body>
+
+</html>

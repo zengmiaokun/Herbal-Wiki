@@ -1,9 +1,74 @@
 @import url("../layui/css/layui.css");
+html,
 body {
+    height: 100%;
+}
+
+body {
+    min-width: 600px;
     background: url(../images/bg.jpg) no-repeat bottom right;
     background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header {
+    height: 60px;
+    border-bottom: none;
+}
+
+.header .index {
+    left: 40px;
+    position: absolute;
+}
+
+a.index {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 26px;
+    top: 13px;
+}
+
+a.index:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.header .search {
+    position: absolute;
+    width: 160px;
+    left: 150px;
+    top: 16px;
+}
+
+.header .search .layui-input {
+    height: 30px;
+    padding-left: 12px;
+    background-color: #424652;
+    background-color: rgba(255, 255, 255, .05);
+    border: none 0;
+    color: #fff;
+    color: rgba(255, 255, 255, .5);
+    font-size: 12px;
 }
 
 .layui-nav {
     text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    background: none;
+}
+
+.search-type {
+    text-align: center !important;
+}
+
+.search-type ul>li {
+    font-size: 24px;
+    margin: auto 30px;
+}
+
+.search-type .layui-tab-item>iframe {
+    width: 80%;
+    height: 100%;
 }

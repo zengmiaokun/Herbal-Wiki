@@ -24,7 +24,7 @@ body {
     text-align: right;
     width: 100%;
     position: absolute;
-    background-color: #00000020;
+    background-color: rgba(0, 0, 0, 0.13);
 }
 
 
@@ -47,6 +47,14 @@ body {
     padding: 0 20px;
     font-size: 30px;
     background-color: #5FB878;
+}
+
+@media (max-width: 600px) {
+    .search .layui-input {
+        padding-left: 30px;
+        height: 55px;
+        width: 320px;
+    }
 }
 
 
@@ -108,6 +116,7 @@ body {
 
 .swiper-slide p {
     bottom: 0;
+    left: 10%;
     padding-bottom: 30px;
     width: 80%;
     position: absolute;
@@ -123,9 +132,12 @@ body {
     left: -50px;
     top: 100%;
     z-index: -1;
-    -webkit-box-shadow: 0 0 150px 135px #101010a8;
-    -moz-box-shadow: 0 0 150px 135px #101010a8;
-    box-shadow: 0 0 150px 135px #101010a8;
+    -webkit-box-shadow: 0 0 150px 135px rgba(16, 16, 16, 0.6588235294117647);
+    ;
+    -moz-box-shadow: 0 0 150px 135px rgba(16, 16, 16, 0.6588235294117647);
+    ;
+    box-shadow: 0 0 150px 135px rgba(16, 16, 16, 0.6588235294117647);
+    ;
 }
 
 .swiper-slide.book {
@@ -155,5 +167,5 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-    background: #393d49ad;
+    background: rgba(95, 184, 120, 0.95);
 }
