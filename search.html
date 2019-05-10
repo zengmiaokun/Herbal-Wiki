@@ -7,6 +7,7 @@
     <title>搜索结果</title>
     <link rel="stylesheet" href="./css/rearch.css">
     <script src="./layui/layui.js"></script>
+    <script src="./font/iconfont.js"></script>
 </head>
 </head>
 
@@ -43,12 +44,6 @@
             </div>
 
         </div>
-        <script>
-            //注意：导航 依赖 element 模块，否则无法进行功能性操作
-            layui.use('element', function() {
-                var element = layui.element;
-            });
-        </script>
     </div>
     <div class="layui-tab layui-tab-brief search-type">
         <ul class="layui-tab-title">
@@ -57,19 +52,195 @@
         </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
-                <iframe src="fast_search.html" frameborder="0"></iframe>
+                <fieldset class="search-box">
+                    <legend>
+                        <h3>快速筛选</h3>
+                    </legend>
+                    <div class="layui-container filter-box">
+                        <table>
+                            <tr>
+                                <td class="filter-label">所&nbsp;属&nbsp;纲</td>
+                                <td>
+                                    <div class="layui-btn-container filter-list">
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="filter-label">功&nbsp;&nbsp;&nbsp;&nbsp;效</td>
+                                <td>
+                                    <div class="layui-btn-container filter-list">
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </fieldset>
+                <fieldset class="result-box">
+                    <legend>
+                        <h3>检索结果</h3>
+                    </legend>
+                    <div class="layui-container result-list">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                        </div>
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+
             </div>
 
             <!-- 高级检索 -->
             <div class="layui-tab-item">
-                <iframe src="adv_search.html" frameborder="0"></iframe>
+                <fieldset class="search-box">
+                    <legend>
+                        <h3>高级检索</h3>
+                    </legend>
+                    <div class="layui-cintainer layui-form adv-box">
+                        <div class="layui-form-item">
+                            <div class="change-num layui-input-inline">
+                                <a href="javacript:void(0);">
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-jiahao"></use>
+                                    </svg>
+                                </a>
+                                <a href="javacript:void(0);">
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-jianhao"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="field-select layui-input-inline">
+                                <select name="" id="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                            <div class="field-text layui-input-inline">
+                                <input type="text" name="" required lay-verify="required" class="layui-input">
+                            </div>
+                            <div class="layui-input-inline prec">
+                                <input type="checkbox" checked name="zzz" lay-skin="switch" lay-text="精确|模糊">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="log layui-input-inline">
+                                <select name="" id="">
+                                    <option value="and">与</option>
+                                    <option value="or">或</option>
+                                    <option value="not">非</option>
+                                </select>
+                            </div>
+                            <div class="field-select layui-input-inline">
+                                <select name="" id="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                            <div class="field-text layui-input-inline">
+                                <input type="text" name="" required lay-verify="required" class="layui-input">
+                            </div>
+                            <div class="layui-input-inline prec">
+                                <input type="checkbox" checked name="zzz" lay-skin="switch" lay-text="精确|模糊">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block adv-button">
+                                <button class="layui-btn layui-btn-radius" lay-submit lay-filter="formDemo">检索</button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="result-box">
+                    <legend>
+                        <h3>检索结果</h3>
+                    </legend>
+                    <div class="layui-container result-list">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                        </div>
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class=" result-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
             </div>
         </div>
     </div>
     <script>
-        layui.use('element', 'form', function() {
-            var element = layui.element;
-            var form = layui.form;
+        layui.use(['element', 'form'], function() {
+            var element = layui.element,
+                form = layui.form;
+            form.render();
         });
     </script>
 </body>

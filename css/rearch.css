@@ -1,4 +1,15 @@
 @import url("../layui/css/layui.css");
+
+/* 引入图标 */
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 html,
 body {
     height: 100%;
@@ -71,4 +82,98 @@ a.index:hover {
 .search-type .layui-tab-item>iframe {
     width: 80%;
     height: 100%;
+}
+
+.search-box,
+.result-box {
+    width: 80%;
+    min-width: 850px;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+legend {
+    margin: 0 auto;
+}
+
+.search-box legend h3,
+.result-box legend h3 {
+    /* font-weight: bolder; */
+    text-align: center;
+    font-size: 22px;
+}
+
+.filter-box,
+.adv-box,
+.result-list {
+    width: 90%;
+    min-width: 850px;
+}
+
+.filter-box table {
+    border-collapse: separate;
+    border-spacing: 5px 20px;
+}
+
+.filter-box td {
+    border: 1px solid #009688;
+}
+
+.filter-label {
+    width: 120px;
+    font-size: 20px;
+    background: rgba(0, 150, 136, 0.188);
+}
+
+.filter-list {
+    margin: 10px 30px 0;
+    text-align: left;
+}
+
+.result-list,
+.adv-box {
+    margin: 20px auto;
+}
+
+.result-item {
+    background: #000;
+    height: 200px;
+}
+
+.layui-form-item>.field-select {
+    width: 110px;
+}
+
+.layui-form-item>.field-text {
+    width: 47%;
+}
+
+.layui-form-item>.log,
+.layui-form-item>.change-num {
+    width: 110px;
+}
+
+.layui-form-item>.change-num {
+    font-size: 32px;
+}
+
+.layui-form-item {
+    margin-left: 60px;
+}
+
+.layui-form-item>.layui-input-inline.prec {
+    width: 120px;
+}
+
+.adv-button {
+    left: -30px;
+    margin-left: unset;
+}
+
+.adv-button>button {
+    margin-top: 20px;
+    padding: 0 36px;
+    font-size: 18px;
 }
