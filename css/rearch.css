@@ -137,11 +137,6 @@ legend {
     margin: 20px auto;
 }
 
-.result-item {
-    background: #000;
-    height: 200px;
-}
-
 .layui-form-item>.field-select {
     width: 110px;
 }
@@ -176,4 +171,77 @@ legend {
     margin-top: 20px;
     padding: 0 36px;
     font-size: 18px;
+}
+
+
+/* 翻转卡片 */
+
+.result-item {
+    margin: 1rem;
+    width: calc(33% - 2rem);
+    height: 300px;
+}
+
+.front,
+.back {
+    display: flex;
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: ease-in-out 600ms;
+}
+
+.front {
+    background-size: cover;
+    /* padding: 2rem; */
+    font-size: 1.618rem;
+    overflow: hidden;
+}
+
+.front:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: red;
+    opacity: .25;
+    z-index: -1;
+}
+
+.result-card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.result-card:nth-child(even):hover .front {
+    transform: rotateY(-180deg);
+}
+
+.back {
+    background: pink;
+    transform: rotateY(-180deg);
+    /* padding: 0 2em; */
+}
+
+.result-card:hover .back {
+    transform: rotateY(0deg);
+}
+
+.result-card:nth-child(even) .back {
+    transform: rotateY(180deg);
+}
+
+.result-card:nth-child(even):hover .back {
+    transform: rotateY(0deg);
 }
