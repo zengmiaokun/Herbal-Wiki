@@ -32,9 +32,18 @@
     </div>
     <script>
         //注意：导航 依赖 element 模块，否则无法进行功能性操作
-        layui.use('element', function() {
+        layui.use(['element', 'jquery'], function() {
+            $ = layui.$;
             var element = layui.element;
         });
+
+        function show() {
+            $("#focus_shade").fadeOut(300);
+        }
+
+        function fade() {
+            $("#focus_shade").fadeIn(300);
+        }
     </script>
     <!-- Swiper -->
     <div class="swiper-container">
@@ -42,9 +51,10 @@
             <div class="swiper-slide info">
                 <!-- 搜索框 -->
                 <form action="./search.html" class="fly-extend-banner-search search" target="_blank">
-                    <div class="layui-inline"> <input placeholder="请输入要查询的中草药" name="kws" autocomplete="off" value="" class="layui-input"> </div><button class="layui-btn"><i
+                    <div class="layui-inline"> <input onBlur="show()" onFocus="fade()" placeholder="请输入要查询的中草药" name="kws" autocomplete="off" value="" class="layui-input"> </div><button class="layui-btn"><i
                             class="layui-icon layui-icon-search"></i></button>
                 </form>
+                <div id="focus_shade"></div>
 
                 <p>
                     <i class="layui-icon layui-icon-down down-arrow"></i>

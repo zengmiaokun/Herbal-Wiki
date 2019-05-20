@@ -19,7 +19,7 @@ body {
 /* 导航 */
 
 .layui-nav {
-    z-index: 2;
+    z-index: 200;
     top: 0;
     text-align: right;
     width: 100%;
@@ -31,6 +31,7 @@ body {
 /* 搜索 */
 
 .search {
+    z-index: 500;
     top: 25%;
     left: 12%;
     position: absolute;
@@ -168,4 +169,18 @@ body {
 
 .swiper-pagination-bullet-active {
     background: rgba(95, 184, 120, 0.95);
+}
+
+
+/* 搜索框背景遮罩 */
+
+#focus_shade {
+    top: 0;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.45;
+    z-index: 100;
 }
