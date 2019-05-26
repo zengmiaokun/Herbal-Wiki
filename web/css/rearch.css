@@ -88,6 +88,10 @@ a.index:hover {
     color: #303541;
 }
 
+.header .search .field-select .layui-this {
+    background: #e27628;
+}
+
 .header .submit {
     display: inline-block;
 }
