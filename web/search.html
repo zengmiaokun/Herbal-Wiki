@@ -12,15 +12,29 @@
 </head>
 
 <body>
-    <div class="layui-layout layui-layout-admin">
+    <div class="nav-box">
         <!-- 导航栏 -->
-        <div class="header layui-header">
+        <div class="header layui-container layui-header">
             <div class="layui-main">
                 <a class="index" href="./index.html">首页</a>
-
-                <form action="search.html" class="fly-extend-banner-search search" target="">
-                    <div class="layui-inline">
-                        <input placeholder="请输入要查询的中草药" name="kws" autocomplete="off" value="" class="layui-input">
+                <form action="search.html" class="fly-extend-banner-search layui-form search" target="">
+                    <div class="layui-form-item">
+                        <div class="field-select layui-input-inline">
+                            <select name="field" id="">
+                            <option value="all">全部</option>
+                            <option value="name">名称</option>
+                            <option value="treat">主治</option>
+                            <option value="class">所属纲</option>
+                        </select>
+                        </div>
+                        <div class="field-text layui-input-inline">
+                            <input type="text" name="kw" required lay-verify="required" class="layui-input">
+                        </div>
+                        <div class="submit">
+                            <button class="layui-btn" lay-submit lay-filter="kw">
+                                <i class="layui-icon layui-icon-search"></i>
+                            </button>
+                        </div>
                     </div>
                 </form>
 
@@ -44,282 +58,53 @@
 
         </div>
     </div>
-    <div class="layui-tab layui-tab-brief search-type">
-        <ul class="layui-tab-title">
-            <li class="layui-this">快速检索</li>
-            <li>高级检索</li>
-        </ul>
-        <div class="layui-tab-content">
-            <div class="layui-tab-item layui-show">
-                <fieldset class="search-box">
-                    <legend>
-                        <h3>快速筛选</h3>
-                    </legend>
-                    <div class="layui-container filter-box">
-                        <table>
-                            <tr>
-                                <td class="filter-label">所&nbsp;属&nbsp;纲</td>
-                                <td>
-                                    <div class="layui-btn-container filter-list">
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="filter-label">功&nbsp;&nbsp;&nbsp;&nbsp;效</td>
-                                <td>
-                                    <div class="layui-btn-container filter-list">
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮二</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮三</button>
-                                        <button class="layui-btn layui-btn-sm layui-btn-primary">按钮一</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-
-                    </div>
-                </fieldset>
-                <fieldset class="result-box">
-                    <legend>
-                        <h3>检索结果</h3>
-                    </legend>
-                    <div class="layui-container result-list">
-                        <div class="layui-row">
-                            <div class="layui-col-xs4 result-item">
-                                <div class="result-card">
-                                    <div class="front">
-                                        <p>正面内容</p>
-                                    </div>
-                                    <div class="back">
-                                        <p>反面内容</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs4 result-item">
-                                <div class="result-card">
-                                    <div class="front">
-                                        <p>正面内容</p>
-                                    </div>
-                                    <div class="back">
-                                        <p>反面内容</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs4 result-item">
-                                <div class="result-card">
-                                    <div class="front">
-                                        <p>正面内容</p>
-                                    </div>
-                                    <div class="back">
-                                        <p>反面内容</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs4 result-item">
-                                <div class="result-card">
-                                    <div class="front">
-                                        <p>正面内容</p>
-                                    </div>
-                                    <div class="back">
-                                        <p>反面内容</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs4 result-item">
-                                <div class="result-card">
-                                    <div class="front">
-                                        <p>正面内容</p>
-                                    </div>
-                                    <div class="back">
-                                        <p>反面内容</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs4 result-item">
-                                <div class="result-card">
-                                    <div class="front">
-                                        <p>正面内容</p>
-                                    </div>
-                                    <div class="back">
-                                        <p>反面内容</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </fieldset>
-
-
-                </div>
-
-                <!-- 高级检索 -->
-                <div class="layui-tab-item">
-                    <fieldset class="search-box">
-                        <legend>
-                            <h3>高级检索</h3>
-                        </legend>
-                        <div class="layui-cintainer layui-form adv-box">
-                            <div class="layui-form-item">
-                                <div class="change-num layui-input-inline">
-                                    <a href="javacript:void(0);">
-                                        <svg class="icon" aria-hidden="true">
-                                        <use xlink:href="#icon-jiahao"></use>
-                                    </svg>
-                                    </a>
-                                    <a href="javacript:void(0);">
-                                        <svg class="icon" aria-hidden="true">
-                                        <use xlink:href="#icon-jianhao"></use>
-                                    </svg>
-                                    </a>
-                                </div>
-                                <div class="field-select layui-input-inline">
-                                    <select name="" id="">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>
-                                </div>
-                                <div class="field-text layui-input-inline">
-                                    <input type="text" name="" required lay-verify="required" class="layui-input">
-                                </div>
-                                <div class="layui-input-inline prec">
-                                    <input type="checkbox" checked name="zzz" lay-skin="switch" lay-text="精确|模糊">
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <div class="log layui-input-inline">
-                                    <select name="" id="">
-                                    <option value="and">与</option>
-                                    <option value="or">或</option>
-                                    <option value="not">非</option>
-                                </select>
-                                </div>
-                                <div class="field-select layui-input-inline">
-                                    <select name="" id="">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>
-                                </div>
-                                <div class="field-text layui-input-inline">
-                                    <input type="text" name="" required lay-verify="required" class="layui-input">
-                                </div>
-                                <div class="layui-input-inline prec">
-                                    <input type="checkbox" checked name="zzz" lay-skin="switch" lay-text="精确|模糊">
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <div class="layui-input-block adv-button">
-                                    <button class="layui-btn layui-btn-radius" lay-submit lay-filter="formDemo">检索</button>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="result-box">
-                        <legend>
-                            <h3>检索结果</h3>
-                        </legend>
-                        <div class="layui-container result-list">
-                            <div class="layui-row">
-                                <div class="layui-col-xs4 result-item">
-                                    <div class="result-card">
-                                        <div class="front">
-                                            <p>正面内容</p>
-                                        </div>
-                                        <div class="back">
-                                            <p>反面内容</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="layui-col-xs4 result-item">
-                                    <div class="result-card">
-                                        <div class="front">
-                                            <p>正面内容</p>
-                                        </div>
-                                        <div class="back">
-                                            <p>反面内容</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="layui-col-xs4 result-item">
-                                    <div class="result-card">
-                                        <div class="front">
-                                            <p>正面内容</p>
-                                        </div>
-                                        <div class="back">
-                                            <p>反面内容</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="layui-col-xs4 result-item">
-                                    <div class="result-card">
-                                        <div class="front">
-                                            <p>正面内容</p>
-                                        </div>
-                                        <div class="back">
-                                            <p>反面内容</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="layui-col-xs4 result-item">
-                                    <div class="result-card">
-                                        <div class="front">
-                                            <p>正面内容</p>
-                                        </div>
-                                        <div class="back">
-                                            <p>反面内容</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="layui-col-xs4 result-item">
-                                    <div class="result-card">
-                                        <div class="front">
-                                            <p>正面内容</p>
-                                        </div>
-                                        <div class="back">
-                                            <p>反面内容</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </fieldset>
-                    </div>
-                </div>
+    <!-- 面包屑导航 -->
+    <div class="layui-container bread-nav">
+        <span class="layui-breadcrumb">
+            <a href="./index.jsp">首页</a>
+            <a href="javascript: void(0);"><cite>搜索结果</cite></a>
+          </span>
+    </div>
+    <div class="result-box">
+        <div class="layui-container">
+            <div class="result-summary">
+                共搜索到
+                <span>124</span> 种
+                <span>名称</span> 字段中包含
+                <span>草</span> 的中草药
             </div>
-            <script>
-                layui.use(['element', 'form'], function() {
-                    var element = layui.element,
-                        form = layui.form;
-                    form.render();
-                });
-            </script>
+            <div class="result-list">
+                <ul>
+                    <li class="result-item">
+                        <div class="result-card">
+
+                        </div>
+                    </li>
+                    <li class="result-item"></li>
+                    <li class="result-item"></li>
+                    <li class="result-item"></li>
+                    <li class="result-item"></li>
+                    <li class="result-item"></li>
+                    <li class="result-item"></li>
+                    <li class="result-item"></li>
+                    <li class="result-item"></li>
+                    <li class="result-item"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        layui.use(['jquery', 'element', 'form'], function() {
+            $ = layui.$;
+            var element = layui.element,
+                form = layui.form;
+            form.render();
+            $(".result-box")[0].style.minHeight = $(window).height() - $(".result-box")[0].offsetTop + "px";
+        });
+        window.onresize = function() {
+            $(".result-box")[0].style.minHeight = $(window).height() - $(".result-box")[0].offsetTop + "px";
+        };
+    </script>
 </body>
 
 </html>

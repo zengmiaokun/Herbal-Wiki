@@ -16,49 +16,32 @@ body {
 }
 
 body {
-    min-width: 600px;
-    background: url(../images/bg.jpg) no-repeat bottom right;
-    background-size: cover;
-    box-sizing: border-box;
     position: relative;
 }
 
+.nav-box {
+    background: saddlebrown;
+}
+
 .header {
+    padding: 0;
     height: 60px;
     border-bottom: none;
 }
 
 .header .index {
-    left: 40px;
+    left: 1.5rem;
     position: absolute;
 }
 
 a.index {
     color: rgba(255, 255, 255, 0.7);
     font-size: 26px;
-    top: 13px;
+    top: 0.6rem;
 }
 
 a.index:hover {
     color: rgba(255, 255, 255, 0.9);
-}
-
-.header .search {
-    position: absolute;
-    width: 160px;
-    left: 150px;
-    top: 16px;
-}
-
-.header .search .layui-input {
-    height: 30px;
-    padding-left: 12px;
-    background-color: #424652;
-    background-color: rgba(255, 255, 255, .05);
-    border: none 0;
-    color: #fff;
-    color: rgba(255, 255, 255, .5);
-    font-size: 12px;
 }
 
 .layui-nav {
@@ -70,177 +53,74 @@ a.index:hover {
     background: none;
 }
 
-.search-type {
-    text-align: center !important;
-}
 
-.search-type ul>li {
-    font-size: 24px;
-    margin: auto 30px;
-}
+/* 搜索框 */
 
-.search-box,
-.result-box {
-    width: 80%;
-    min-width: 850px;
-    max-width: 1400px;
-    margin: auto;
-    margin-top: 30px;
-    position: relative;
-}
-
-legend {
-    margin: 0 auto;
-}
-
-.search-box legend h3,
-.result-box legend h3 {
-    /* font-weight: bolder; */
-    text-align: center;
-    font-size: 22px;
-}
-
-.filter-box,
-.adv-box,
-.result-list {
-    width: 90%;
-    min-width: 850px;
-}
-
-.result-list {
-    width: 93%;
-}
-
-.filter-box table {
-    border-collapse: separate;
-    border-spacing: 5px 20px;
-}
-
-.filter-box td {
-    border: 1px solid #009688;
-}
-
-.filter-label {
-    width: 120px;
-    font-size: 20px;
-    background: rgba(0, 150, 136, 0.188);
-}
-
-.filter-list {
-    margin: 10px 30px 0;
-    text-align: left;
-}
-
-.result-list,
-.adv-box {
-    margin: 20px auto;
-}
-
-.layui-form-item>.field-select {
-    width: 110px;
-}
-
-.layui-form-item>.field-text {
-    width: 47%;
-}
-
-.layui-form-item>.log,
-.layui-form-item>.change-num {
-    width: 110px;
-}
-
-.layui-form-item>.change-num {
-    font-size: 32px;
-}
-
-.layui-form-item {
-    margin-left: 60px;
-}
-
-.layui-form-item>.layui-input-inline.prec {
-    width: 120px;
-}
-
-.adv-button {
-    left: -30px;
-    margin-left: unset;
-}
-
-.adv-button>button {
-    margin-top: 20px;
-    padding: 0 36px;
-    font-size: 18px;
-}
-
-
-/* 翻转卡片 */
-
-.result-item {
-    margin: 1rem;
-    width: 220px;
-    height: 300px;
-}
-
-.front,
-.back {
-    display: flex;
-    border-radius: 6px;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.header .search {
     position: absolute;
-    height: 100%;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: ease-in-out 600ms;
+    left: 10rem;
+    top: 0.6rem;
+    border-radius: 5rem;
+    background: rgba(255, 255, 255, 0.15);
 }
 
-.front {
-    background-size: cover;
-    /* padding: 2rem; */
-    font-size: 1.618rem;
-    overflow: hidden;
+.header .search .layui-form-item {
+    margin: 0;
 }
 
-.front:before {
-    position: absolute;
+.header .search .layui-form-item input,
+.header .search .layui-form-item .submit button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.header .search .field-select {
+    padding-left: 0.5rem;
+    width: 6rem;
+}
+
+.header .search .field-select input {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header .search .field-select option {
+    color: #303541;
+}
+
+.header .submit {
+    display: inline-block;
+}
+
+
+/* 面包屑导航 */
+
+.bread-nav * {
+    font-size: 16px;
+}
+
+.bread-nav>span {
     display: block;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: red;
-    opacity: .25;
-    z-index: -1;
+    margin: 1.5rem;
 }
 
-.result-card:hover .front {
-    transform: rotateY(180deg);
+
+/* 搜索结果 */
+
+.result-box {
+    background: #f4f4f4;
+    background: url(../images/bg.png) no-repeat bottom right;
+    background-size: cover;
 }
 
-.result-card:nth-child(even):hover .front {
-    transform: rotateY(-180deg);
+
+/* 搜索汇总 */
+
+.result-summary {
+    padding: 1.5rem;
+    font-size: 16px;
 }
 
-.back {
-    background: pink;
-    transform: rotateY(-180deg);
-    /* padding: 0 2em; */
-}
-
-.result-card:hover .back {
-    transform: rotateY(0deg);
-}
-
-.result-card:nth-child(even) .back {
-    transform: rotateY(180deg);
-}
-
-.result-card:nth-child(even):hover .back {
-    transform: rotateY(0deg);
+.result-summary>* {
+    font-weight: bold;
 }
