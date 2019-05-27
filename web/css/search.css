@@ -136,7 +136,16 @@ a.index:hover {
     margin: 0.8rem;
     border-radius: 0.6rem;
     background: lightsalmon;
-    box-shadow: 8px 14px 20px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
+    transition: all .5s ease;
+    box-shadow: 8px 14px 20px rgba(39, 44, 49, .14), 1px 3px 8px rgba(39, 44, 49, .07);
+}
+
+.result-card .card-content:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px)
 }
 
 .result-card .herbal-img {
@@ -149,14 +158,19 @@ a.index:hover {
     transform: translateZ(0);
 }
 
-.result-card .herbal-img:hover {
-    -webkit-transform: translate3D(0, -1px, 0) scale(1.08);
-    transform: translate3D(0, -1px, 0) scale(1.08)
+.result-card .herbal-img img:hover {
+    -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
+    transform: translate3D(0, -1px, 0) scale(1.06)
 }
 
 .result-card .herbal-img img {
     width: 85%;
     border-radius: 100rem;
+    transition: all .5s ease;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .result-card h2 {
