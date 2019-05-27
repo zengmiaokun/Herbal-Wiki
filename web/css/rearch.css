@@ -17,6 +17,8 @@ body {
 
 body {
     position: relative;
+    background: url(../images/bg.png) no-repeat bottom right;
+    background-size: cover;
 }
 
 .nav-box {
@@ -30,7 +32,7 @@ body {
 }
 
 .header .index {
-    left: 1.5rem;
+    /* left: 1.5rem; */
     position: absolute;
 }
 
@@ -99,23 +101,21 @@ a.index:hover {
 
 /* 面包屑导航 */
 
+.bread-nav {
+    background: #FFF;
+}
+
 .bread-nav * {
     font-size: 16px;
 }
 
-.bread-nav>span {
+.bread-nav>div {
     display: block;
-    margin: 1.5rem;
+    padding: 1.5rem;
 }
 
 
 /* 搜索结果 */
-
-.result-box {
-    background: #f4f4f4;
-    background: url(../images/bg.png) no-repeat bottom right;
-    background-size: cover;
-}
 
 
 /* 搜索汇总 */
@@ -127,4 +127,40 @@ a.index:hover {
 
 .result-summary>* {
     font-weight: bold;
+}
+
+
+/* 搜索结果卡片 */
+
+.result-card .card-content {
+    margin: 0.8rem;
+    border-radius: 0.6rem;
+    background: lightsalmon;
+    box-shadow: 8px 14px 20px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
+}
+
+.result-card .herbal-img {
+    padding-top: 2rem;
+    text-align: center;
+    transition: all .5s ease;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.result-card .herbal-img:hover {
+    -webkit-transform: translate3D(0, -1px, 0) scale(1.08);
+    transform: translate3D(0, -1px, 0) scale(1.08)
+}
+
+.result-card .herbal-img img {
+    width: 85%;
+    border-radius: 100rem;
+}
+
+.result-card h2 {
+    padding: 2rem;
+    text-align: center;
+    color: #FFF;
 }
