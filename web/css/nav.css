@@ -1,0 +1,76 @@
+.nav-box {
+    background: saddlebrown;
+}
+
+.header {
+    padding: 0;
+    height: 60px;
+    border-bottom: none;
+}
+
+.header .index {
+    /* left: 1.5rem; */
+    position: absolute;
+}
+
+a.index {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 26px;
+    top: 0.6rem;
+}
+
+a.index:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.layui-nav {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    background: none;
+}
+
+
+/* 搜索框 */
+
+.header .search {
+    position: absolute;
+    left: 10rem;
+    top: 0.6rem;
+    border-radius: 5rem;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.header .search .layui-form-item {
+    margin: 0;
+}
+
+.header .search .layui-form-item input,
+.header .search .layui-form-item .submit button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.header .search .field-select {
+    padding-left: 0.5rem;
+    width: 6rem;
+}
+
+.header .search .field-select input {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header .search .field-select option {
+    color: #303541;
+}
+
+.header .search .field-select .layui-this {
+    background: #e27628;
+}
+
+.header .submit {
+    display: inline-block;
+}

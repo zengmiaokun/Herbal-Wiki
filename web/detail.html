@@ -10,15 +10,29 @@
 </head>
 
 <body>
-    <div class="layui-layout layui-layout-admin">
+    <div class="nav-box">
         <!-- 导航栏 -->
-        <div class="header layui-header">
+        <div class="header layui-container layui-header">
             <div class="layui-main">
                 <a class="index" href="./index.html">首页</a>
-
-                <form action="search.html" class="fly-extend-banner-search search" target="">
-                    <div class="layui-inline">
-                        <input placeholder="请输入要查询的中草药" name="kws" autocomplete="off" value="" class="layui-input">
+                <form action="search.html" class="fly-extend-banner-search layui-form search" target="">
+                    <div class="layui-form-item">
+                        <div class="field-select layui-input-inline">
+                            <select name="field" id="">
+                            <option value="all">全部</option>
+                            <option value="name">名称</option>
+                            <option value="treat">主治</option>
+                            <option value="class">所属纲</option>
+                        </select>
+                        </div>
+                        <div class="field-text layui-input-inline">
+                            <input type="text" name="kw" required lay-verify="required" class="layui-input">
+                        </div>
+                        <div class="submit">
+                            <button class="layui-btn" lay-submit lay-filter="kw">
+                                <i class="layui-icon layui-icon-search"></i>
+                            </button>
+                        </div>
                     </div>
                 </form>
 
@@ -42,10 +56,34 @@
 
         </div>
     </div>
-    <div class="detail-box">
-
+    <!-- 面包屑导航 -->
+    <div class="bread-nav">
+        <div class="layui-container">
+            <span class="layui-breadcrumb">
+                    <a href="./index.jsp">首页</a>
+                    <a href="javascript: void(0);"><cite>神灯火</cite>
+            </a>
+            </span>
+        </div>
     </div>
-    <div class="talk-box">
+    <!-- 中草药详情 -->
+    <div class="detail-box layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md5 layui layui-col 12">
+                <div class="herbal-img">
+                    <img src="./images/herbal/default.jpg" alt="">
+                </div>
+            </div>
+            <div class="layui-col-md7 layui layui-col 12">
+                <p><span class="field">所属纲：</span>水部</p>
+                <p><span class="field">名称：</span>神灯火</p>
+                <p><span class="field">释名：</span>把桃树枝削成针状，如鸡蛋大，长五、六寸，放干待用。用时以棉纸三、五层衬于患处，将针蘸麻油点着，即刻吹熄，趁热针刺。</p>
+                <p><span class="field">主治：</span>心腹冷痛，风寒湿痹，附骨阻疽等。凡在筋骨隐痛者，针刺后，火气直达患处，疗效显著。</p>
+                <p><span class="field">附方：</span>心腹冷痛，风寒湿痹，附骨阻疽等。凡在筋骨隐痛者，针刺后，火气直达患处，疗效显著。</p>
+            </div>
+        </div>
+    </div>
+    <div class="talk-box layui-container">
         <div class="reply">
             <textarea name="" class="chat-box" id="chat-box" placeholder="评论一下又不要钱！">评论一下又不要钱！</textarea>
         </div>
