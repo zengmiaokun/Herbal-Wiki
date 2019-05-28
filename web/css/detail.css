@@ -37,12 +37,52 @@ body {
 
 /* 中草药信息 */
 
+.detail-box .layui-row {
+    margin-top: 2rem;
+    background: blanchedalmond;
+    border-radius: 0.5rem;
+    box-shadow: 8px 14px 20px rgba(39, 44, 49, .14), 1px 3px 8px rgba(39, 44, 49, .07);
+}
+
 .detail-box .herbal-img {
     padding: 2rem;
+    text-align: center;
 }
 
 .detail-box .herbal-img img {
     width: 80%;
+    border-radius: 100rem;
+    transition: all .5s ease;
+    box-shadow: 8px 14px 20px rgba(39, 44, 49, .14), 1px 3px 8px rgba(39, 44, 49, .07);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.detail-box .herbal-img img:hover {
+    -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
+    -moz-transform: translate3D(0, -1px, 0) scale(1.06);
+    -ms-transform: translate3D(0, -1px, 0) scale(1.06);
+    transform: translate3D(0, -1px, 0) scale(1.06);
+}
+
+.detail-box .herbal-text {
+    padding: 2rem;
+    font-size: 16px;
+}
+
+.detail-box .herbal-text p {
+    line-height: 1.8rem;
+    margin: 0.5rem 0;
+}
+
+.detail-box .herbal-text .field {
+    font-weight: bold;
 }
 
 
