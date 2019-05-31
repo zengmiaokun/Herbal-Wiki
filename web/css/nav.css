@@ -35,16 +35,23 @@ a.index:hover {
 
 /* 搜索框 */
 
-.header .search {
+.header .search,
+.header .search:hover,
+.header .search .autofill-selected{
     position: absolute;
     left: 10rem;
     top: 0.6rem;
     border-radius: 5rem;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15) !important;
 }
 
 .header .search .layui-form-item {
     margin: 0;
+}
+
+.header .search .layui-form-item input,
+.header .search .layui-form-item input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .header .search .layui-form-item input,

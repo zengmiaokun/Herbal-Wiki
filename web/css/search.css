@@ -99,3 +99,21 @@ body {
     text-align: center;
     color: #FFF;
 }
+
+
+/*分页*/
+
+#page {
+    text-align: center;
+    margin: 2rem auto 3rem;
+}
+
+#page .layui-laypage a, .layui-laypage span {
+    padding: 3px 15px;
+    font-size: 18px;
+}
+
+#page .layui-laypage a:hover
+{
+    color: chocolate;
+}
